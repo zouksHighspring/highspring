@@ -1,16 +1,14 @@
 package com.example.library.domain;
 
-import lombok.*;
+import com.example.library.domain.enumeration.AdresseStatus;
+import lombok.Builder;
 
-@Data
-@AllArgsConstructor
-@NoArgsConstructor
-@Getter
-@Setter
 @Builder
-public class Adresse {
-    private String city;
-    private String state;
-    private String country;
-    private String postalCode;
+public record Adresse(
+        String city,
+        String state,
+        String country,
+        String postalCode,
+        AdresseStatus status
+) {
 }

@@ -1,17 +1,18 @@
 package com.example.library.domain;
 
 import lombok.*;
+import lombok.experimental.SuperBuilder;
 
 import java.util.ArrayList;
 import java.util.List;
 
-@EqualsAndHashCode(callSuper = true)
 @Data
-@AllArgsConstructor
 @NoArgsConstructor
-@Getter
-@Setter
-@Builder
+@AllArgsConstructor
+@ToString(callSuper = true)
+@EqualsAndHashCode(callSuper = true)
+@SuperBuilder
 public class Author extends Person {
+    @Builder.Default
     private List<Book> books = new ArrayList<>();
 }

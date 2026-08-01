@@ -1,12 +1,12 @@
 package com.example.library.domain;
 
+import com.example.library.domain.enumeration.BookCategory;
+import com.example.library.domain.enumeration.BookStatus;
 import lombok.*;
 
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@Getter
-@Setter
 @Builder
 public class Book {
     private String title;
@@ -14,6 +14,6 @@ public class Book {
     private String isbn;
     private int pages;
     private double price;
-    private Category category;
-    private String status;
+    private BookCategory category;
+    private BookStatus status;
 }

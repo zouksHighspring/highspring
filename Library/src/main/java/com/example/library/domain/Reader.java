@@ -1,17 +1,12 @@
 package com.example.library.domain;
 
 import lombok.*;
+import lombok.experimental.SuperBuilder;
 
-import java.util.ArrayList;
-import java.util.List;
-
-@EqualsAndHashCode(callSuper = true)
 @Data
-@AllArgsConstructor
 @NoArgsConstructor
-@Getter
-@Setter
-@Builder
+@ToString(callSuper = true)
+@EqualsAndHashCode(callSuper = true)
+@SuperBuilder
 public class Reader extends Person {
-    private List<Loan> loans = new ArrayList<>();
 }
