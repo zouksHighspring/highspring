@@ -1,12 +1,13 @@
 package com.example.library.domain.dto;
 
-import com.example.library.domain.enumeration.BookCategory;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.Size;
 
 public record BookRequest(
-
+        @NotBlank(message = "Le titre est obligatoire.")
+        @Size(max = 200, message = "Le titre ne doit pas dépasser 200 caractères.")
         String title,
-        String isbn,
-        BookCategory category
-
-) {
-}
+        @NotBlank(message = "L'auteur est obligatoire.")
+        @Size(max = 120, message = "L'auteur ne doit pas dépasser 120 caractères.")
+        String author
+) { }
